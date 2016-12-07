@@ -1,0 +1,25 @@
+<apex:page standardController="Project__c">
+    <apex:pageBlock title="Fields in Create Fieldset">
+        <apex:pageBlockTable value="{!$ObjectType.Project__c.FieldSets.Create}" var="f">
+            <apex:column value="{!f}">
+                <apex:facet name="header">Name</apex:facet>
+            </apex:column> 
+            <apex:column value="{!f.Label}">
+                <apex:facet name="header">Label</apex:facet>
+            </apex:column> 
+            <apex:column value="{!f.Type}" >
+                <apex:facet name="header">Data Type</apex:facet>
+            </apex:column> 
+        </apex:pageBlockTable> 
+    </apex:pageBlock>
+    
+    <apex:form id="form">
+        <apex:pageBlock title="Create" mode="edit">
+            <apex:pageBlockSection title="Fieldset dependent" columns="1">
+                <apex:repeat value="{!$ObjectType.Project__c.FieldSets.Create}" var="f">
+                    <apex:inputField value="{!Project__c[f]}" required="{!OR(f.required, f.dbrequired)}"/><br/>
+                </apex:repeat>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

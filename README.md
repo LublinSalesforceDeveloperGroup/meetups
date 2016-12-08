@@ -1,5 +1,5 @@
-# meetups
-Sample code from the meetups
+# Meetups
+Sample code and presentations from the meetups for the Lublin Salesforce Developer Group
 
 # 1. Meetup 
 [Meetup link](https://www.meetup.com/Lublin-Salesforce-Developer-Group/events/235902149/)
